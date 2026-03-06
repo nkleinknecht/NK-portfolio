@@ -366,8 +366,17 @@
   </section>
   <footer>
     <p>© 2026 Nicholas Kleinknecht</p>
-    <p>Built with ❤️ · <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn ↗</a></p>
+    <p>Built with <span id="heartBtn" title="Click me 👀">❤️</span> · <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn ↗</a></p>
   </footer>
+
+<!-- Easter Egg Overlay -->
+  <div id="easterEgg" class="easter-overlay" aria-hidden="true">
+    <div class="easter-box">
+      <div class="loader"></div>
+      <p class="easter-msg">Found a secret!</p>
+      <button class="easter-close" id="easterClose">✕</button>
+    </div>
+  </div>
 
   <script>
     // Theme toggle
@@ -375,6 +384,21 @@
     const html = document.documentElement;
     toggle.addEventListener('change', () => {
       html.dataset.theme = toggle.checked ? 'dark' : '';
+    });
+
+    // Easter egg heart
+    const heartBtn = document.getElementById('heartBtn');
+    const easterEgg = document.getElementById('easterEgg');
+    const easterClose = document.getElementById('easterClose');
+
+    heartBtn.addEventListener('click', () => {
+      easterEgg.classList.add('active');
+    });
+    easterClose.addEventListener('click', () => {
+      easterEgg.classList.remove('active');
+    });
+    easterEgg.addEventListener('click', (e) => {
+      if (e.target === easterEgg) easterEgg.classList.remove('active');
     });
 
     // Active nav link on scroll
