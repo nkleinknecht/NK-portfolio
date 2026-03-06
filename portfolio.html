@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+  <nav>
+    <a href="#home" class="nav-logo">&#123; Nicholas Kleinknecht &#125;</a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active" data-section="home">Home</a></li>
+      <li><a href="#about" data-section="about">About</a></li>
+      <li><a href="#resume" data-section="resume">Resume</a></li>
+    </ul>
+    <div class="nav-right">
+      <label class="switch">
+        <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+        <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>
+        <input type="checkbox" class="input" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </nav>
+
+<!-- HOME -->
+  <section id="home">
+    <div class="grid-bg"></div>
+    <div class="glow-orb"></div>
+
+    <div class="home-content">
+      <div class="home-tag">✦ Welcome!</div>
+
+      <div class="home-hero">
+        <div class="home-photo">
+          <img
+            src="homePhoto.png"
+            alt="Home photo"
+            class="home-headshot"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="home-headshot-placeholder">
+            <span>📷</span>
+            <p>Your Photo<br/><small>Replace homePhoto.png</small></p>
+          </div>
+        </div>
+
+        <div class="home-text">
+          <h1 class="home-title">
+            Hello, I'm<br/>
+            <em>Nicholas Kleinknecht</em>
+          </h1>
+
+          <p class="home-sub">
+            Put in self-summary. line 59.
+          </p>
+
+          <div class="home-actions">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span class="linkedin-icon"></span>Connect on LinkedIn
+            </a>
+            <a href="#about" class="btn btn-outline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      Scroll to explore
+    </div>
+  </section>
+
+<!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 — About Me</div>
+    <h2 class="section-title">A little bit<br/><em style="font-style:italic; color:var(--accent)">about myself</em></h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a <span>dedicated student</span> with a love for learning and a drive to make an impact through technology.
+          My journey in computing began early, and it has since grown into a full-fledged passion.
+        </p>
+        <p>
+          I thrive in collaborative environments, love tackling <span>challenging problems</span>, and am always looking
+          for opportunities to grow both technically and personally.
+        </p>
+        <p>
+          Outside of academics, I enjoy working on side projects, contributing to open-source communities,
+          and staying up to date with the latest developments in the tech world.
+        </p>
+
+        <div class="skills-section">
+          <h3>Skills &amp; Interests</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Network Configuration</span>
+            <span class="skill-tag">Hardware Troubleshooting</span>
+			<span class="skill-tag">Virtualization</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Windows OS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:0.15s">
+        <div class="headshot-wrapper">
+          <img
+            src="aboutPhoto.png"
+            alt="About headshot"
+            class="about-headshot"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="about-headshot-placeholder">
+            <span>📷</span>
+            <p>Add your photo<br/><small>Replace aboutPhoto.png</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- About -->
+    <div class="section-label" style="margin-top:4rem;">02 — Computers &amp; Cybersecurity</div>
+    <h2 class="section-title">My computing<br/><em style="font-style:italic; color:var(--accent)">interests &amp; studies</em></h2>
+
+    <div class="computers-intro reveal">
+      <p>
+        Computer science is more than just writing code — it's a way of thinking.
+        Here are the areas I'm most passionate about and actively exploring.
+      </p>
+    </div>
+
+    <div class="topics-grid">
+      <div class="topic-card reveal">
+        <div class="topic-num">01</div>
+        <div class="topic-icon">🧠</div>
+        <div class="topic-title">Algorithms & Data Structures</div>
+        <p class="topic-desc">Exploring the foundations of efficient computation — from sorting and searching to graphs and dynamic programming.</p>
+      </div>
+      <div class="topic-card reveal" style="transition-delay:0.1s">
+        <div class="topic-num">02</div>
+        <div class="topic-icon">🌐</div>
+        <div class="topic-title">Web Development</div>
+        <p class="topic-desc">Building interactive, user-friendly web experiences using HTML, CSS, JavaScript and modern frameworks.</p>
+      </div>
+      <div class="topic-card reveal" style="transition-delay:0.2s">
+        <div class="topic-num">03</div>
+        <div class="topic-icon">🤖</div>
+        <div class="topic-title">Artificial Intelligence</div>
+        <p class="topic-desc">Fascinated by machine learning, neural networks, and how we can teach machines to reason and learn.</p>
+      </div>
+      <div class="topic-card reveal" style="transition-delay:0.3s">
+        <div class="topic-num">04</div>
+        <div class="topic-icon">🔐</div>
+        <div class="topic-title">Cybersecurity</div>
+        <p class="topic-desc">Understanding how to protect systems and data — from encryption fundamentals to ethical hacking concepts.</p>
+      </div>
+      <div class="topic-card reveal" style="transition-delay:0.4s">
+        <div class="topic-num">05</div>
+        <div class="topic-icon">📱</div>
+        <div class="topic-title">Software Engineering</div>
+        <p class="topic-desc">Learning software design principles, version control, agile methodologies, and best practices for clean code.</p>
+      </div>
+      <div class="topic-card reveal" style="transition-delay:0.5s">
+        <div class="topic-num">06</div>
+        <div class="topic-icon">☁️</div>
+        <div class="topic-title">Cloud & Systems</div>
+        <p class="topic-desc">Diving into operating systems, networking, and cloud platforms to understand how modern infrastructure works.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- RESUME -->
+  <section id="resume">
+    <div class="section-label">03 — Resume</div>
+    <h2 class="section-title">My background<br/><em style="font-style:italic; color:var(--accent)">& experience</em></h2>
+
+<!-- EDUCATION -->
+    <div class="resume-block reveal">
+      <div class="resume-header">
+        <span class="resume-icon">🎓</span>
+        <h3 class="resume-section-title">Education</h3>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">University at Albany</span>
+          <span class="resume-date">Expected: May 2026</span>
+        </div>
+        <div class="resume-role">Bachelor of Science — Cybersecurity</div>
+        <div class="resume-meta">GPA: 3.62 &nbsp;·&nbsp; Award: Dean's List</div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">Westchester Community College</span>
+          <span class="resume-date">Graduated: June 2024</span>
+        </div>
+        <div class="resume-role">Associate of Applied Science — Computer Information Systems</div>
+        <div class="resume-meta">GPA: 3.2</div>
+      </div>
+    </div>
+
+<!-- PROFESSIONAL EXPERIENCE -->
+    <div class="resume-block reveal">
+      <div class="resume-header">
+        <span class="resume-icon">💼</span>
+        <h3 class="resume-section-title">Professional Experience</h3>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">University at Albany</span>
+          <span class="resume-date">January 2026 – May 2026</span>
+        </div>
+        <div class="resume-role">Makerspace Undergraduate Intern</div>
+        <div class="resume-meta">CEHC University at Albany ETEC Makerspace, Uptown Campus, Albany, NY</div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">University at Albany</span>
+          <span class="resume-date">January 2026 – May 2026</span>
+        </div>
+        <div class="resume-role">Cyber Cascading Risk Lab Intern</div>
+        <div class="resume-meta">CEHC University at Albany ETEC Makerspace, Uptown Campus, Albany, NY</div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">ShopRite Supermarkets</span>
+          <span class="resume-date">October 2022 – March 2023</span>
+        </div>
+        <div class="resume-role">Food Service Clerk</div>
+        <div class="resume-meta">Mohegan Lake, NY</div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">Lorimik Realty Corp.</span>
+          <span class="resume-date">January 2022 – August 2022</span>
+        </div>
+        <div class="resume-role">Network Manager</div>
+        <div class="resume-meta">Eastchester, NY</div>
+      </div>
+    </div>
+
+<!-- RESEARCH PROJECTS -->
+    <div class="resume-block reveal">
+      <div class="resume-header">
+        <span class="resume-icon">🔬</span>
+        <h3 class="resume-section-title">Research Projects</h3>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">Containing Cascading Cyber Risk: Applying Zero Trust Architecture in Power Generation Systems</span>
+          <span class="resume-date">January 2026 – May 2026</span>
+        </div>
+        <div class="resume-role">Power Generation Research</div>
+        <div class="resume-meta">University at Albany</div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">Stuxnet Unleashed: How Privilege Escalation Crippled the Natanz Nuclear Facility</span>
+          <span class="resume-date">August 2025 - December 2025<span>
+        </div>
+        <div class="resume-role">Power Generation Research</div>
+        <div class="resume-meta">University at Albany</div>
+      </div>
+    </div>
+
+<!-- CERTIFICATIONS -->
+    <div class="resume-block reveal">
+      <div class="resume-header">
+        <span class="resume-icon">📜</span>
+        <h3 class="resume-section-title">Certifications</h3>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">Google Cybersecurity</span>
+          <span class="resume-date">In Progress</span>
+        </div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-top">
+          <span class="resume-org">Testout PC Pro</span>
+          <span class="resume-date">Earned: December 2022</span>
+        </div>
+      </div>
+    </div>
+
+<!-- TECHNICAL SKILLS -->
+    <div class="resume-block reveal">
+      <div class="resume-header">
+        <span class="resume-icon">🛠️</span>
+        <h3 class="resume-section-title">Technical Skills</h3>
+      </div>
+	  
+<!-- systems & networking-->
+      <div class="skills-category-grid">
+        <div class="skills-category">
+          <h4 class="skills-cat-title">Systems &amp; Networking</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Network Configuration</span>
+            <span class="skill-tag">Hardware Troubleshooting</span>
+			<span class="skill-tag">Peripheral Deployment</span>
+			<span class="skill-tag">Printer Integration</span>
+			<span class="skill-tag">Linux</span>
+			<span class="skill-tag">Windows OS</span>
+			<span class="skill-tag">Android OS</span>
+			<span class="skill-tag">Virtualization</span>
+			
+          </div>
+        </div>
+<!-- programming -->
+        <div class="skills-category">
+          <h4 class="skills-cat-title">Programming</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Visual Studio</span>
+            <span class="skill-tag">C++</span>
+			<span class="skill-tag">HTML</span>
+			<span class="skill-tag">CSS</span>
+          </div>
+        </div>
+<!-- productivity software -->
+        <div class="skills-category">
+          <h4 class="skills-cat-title">Productivity Software</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Microsoft Excel</span>
+            <span class="skill-tag">Word</span>
+			<span class="skill-tag">Powerpoint</span>
+			<span class="skill-tag">Access</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- RESUME DOWNLOAD -->
+    <div class="resume-download-card reveal">
+      <div class="resume-download-info">
+        <div class="resume-download-icon">📄</div>
+        <div class="resume-download-details">
+          <span class="resume-download-filename">Nicholas_Kleinknecht_Resume.pdf</span>
+          <div class="resume-download-meta">
+            <span class="resume-download-meta-item">🗓 Last updated: <strong>March 2026</strong></span>
+            <span class="resume-download-meta-divider">·</span>
+            <span class="resume-download-meta-item">📦 File size: <strong>XX KB</strong></span>
+          </div>
+        </div>
+      </div>
+      <a href="Nicholas_Kleinknecht_Resume.pdf" download="Nicholas_Kleinknecht_Resume.pdf" class="btn btn-primary resume-download-btn">
+        ⬇ Download Resume
+      </a>
+    </div>
+
+  </section>
+  <footer>
+    <p>© 2026 Nicholas Kleinknecht</p>
+    <p>Built with ❤️ · <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn ↗</a></p>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    toggle.addEventListener('change', () => {
+      html.dataset.theme = toggle.checked ? 'dark' : '';
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function updateNav() {
+      let current = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 100;
+        if (window.scrollY >= top) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.section === current);
+      });
+    }
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+    window.addEventListener('scroll', updateNav);
+    updateNav();
+  </script>
+</body>
+</html>
