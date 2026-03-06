@@ -891,7 +891,116 @@ footer a {
   transform: translateY(0);
 }
 
-/* ── RESPONSIVE ── */
+/* ── EASTER EGG ── */
+#heartBtn {
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+#heartBtn:hover {
+  transform: scale(1.4);
+}
+
+.easter-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.easter-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.easter-box {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+  transform: scale(0.85);
+  transition: transform 0.3s ease;
+}
+
+.easter-overlay.active .easter-box {
+  transform: scale(1);
+}
+
+.easter-msg {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.easter-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  line-height: 1;
+  padding: 4px;
+}
+.easter-close:hover {
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+/* From Uiverse.io by FWDJc */
+.loader {
+  width: 7em;
+  height: 5em;
+  position: relative;
+  animation: beat 1s infinite;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  border-radius: 5em 5em 0 0;
+  animation: coldblue 1s infinite;
+}
+.loader::before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.loader::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+@keyframes beat {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+@keyframes coldblue {
+  0%, 100% { background-color: rgb(255, 255, 255); }
+  50%       { background-color: rgb(198, 23, 23); }
+}
 @media (max-width: 768px) {
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
