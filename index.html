@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student Portfolio</title>
+  <title>Nicholas Kleinknecht | Cybersecurity Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="images/nkicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
@@ -42,29 +43,29 @@
 
     <div class="home-content">
       <div class="home-tag">✦ Welcome!</div>
-
+<!-- home photo -->
       <div class="home-hero">
         <div class="home-photo">
           <img
-            src="homePhoto.png"
+            src="images/homePhoto.png"
             alt="Home photo"
             class="home-headshot"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           />
           <div class="home-headshot-placeholder">
             <span>📷</span>
-            <p>Your Photo<br/><small>Replace homePhoto.png</small></p>
+            <p>Image1 missing<br/><small>Replace homePhoto.png</small></p>
           </div>
         </div>
 
         <div class="home-text">
           <h1 class="home-title">
             Hello, I'm<br/>
-            <em>Nicholas Kleinknecht</em>
+            <em>Nicholas Kleinknecht,</em>
           </h1>
 
           <p class="home-sub">
-            Put in self-summary. line 59.
+            a cybersecurity student focused on IoT security, threat analysis, and managing systems
           </p>
 
           <div class="home-actions">
@@ -93,20 +94,20 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I'm a <span>dedicated student</span> with a love for learning and a drive to make an impact through technology.
-          My journey in computing began early, and it has since grown into a full-fledged passion.
+          I'm a <span>dedicated student</span> with an interest for learning and a drive to make an impact through technology.
+          My introduction into computers began before I could read, and it has since grown into my full-fledged passion.
         </p>
         <p>
-          I thrive in collaborative environments, love tackling <span>challenging problems</span>, and am always looking
+          I thrive in collaborative environments, enjoy tackling <span>challenging problems</span>, and I am always looking
           for opportunities to grow both technically and personally.
         </p>
         <p>
-          Outside of academics, I enjoy working on side projects, contributing to open-source communities,
-          and staying up to date with the latest developments in the tech world.
+          Outside of academics, I enjoy working on side projects, collaborating with communities,
+          building computers, and staying up to date with the latest technological advancements.
         </p>
 
         <div class="skills-section">
-          <h3>Skills &amp; Interests</h3>
+          <h3>Interests</h3>
           <div class="skill-tags">
             <span class="skill-tag">Network Configuration</span>
             <span class="skill-tag">Hardware Troubleshooting</span>
@@ -116,18 +117,18 @@
           </div>
         </div>
       </div>
-
+<!-- about photo -->
       <div class="reveal" style="transition-delay:0.15s">
         <div class="headshot-wrapper">
           <img
-            src="aboutPhoto.png"
+            src="images/aboutPhoto.png"
             alt="About headshot"
             class="about-headshot"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           />
           <div class="about-headshot-placeholder">
             <span>📷</span>
-            <p>Add your photo<br/><small>Replace aboutPhoto.png</small></p>
+            <p>Image2 missing<br/><small>Replace aboutPhoto.png</small></p>
           </div>
         </div>
       </div>
@@ -139,47 +140,42 @@
 
     <div class="computers-intro reveal">
       <p>
-        Computer science is more than just writing code — it's a way of thinking.
-        Here are the areas I'm most passionate about and actively exploring.
+        Cybersecurity is more than just securing systems — it's a way of thinking.
+        Here's some areas I'm most passionate about.
       </p>
     </div>
 
-    <div class="topics-grid">
-      <div class="topic-card reveal">
+    <div class="topics-grid">    
+	  <div class="topic-card reveal">
         <div class="topic-num">01</div>
-        <div class="topic-icon">🧠</div>
-        <div class="topic-title">Algorithms & Data Structures</div>
-        <p class="topic-desc">Exploring the foundations of efficient computation — from sorting and searching to graphs and dynamic programming.</p>
+        <div class="topic-icon">🛂</div>
+        <div class="topic-title">Permission Management</div>
+        <p class="topic-desc">During my Testout PC Pro certification, I messed around with editing user permissions in a interactive environment, this included changing users into roles based on their responsibilities.</p>
       </div>
       <div class="topic-card reveal" style="transition-delay:0.1s">
         <div class="topic-num">02</div>
-        <div class="topic-icon">🌐</div>
-        <div class="topic-title">Web Development</div>
-        <p class="topic-desc">Building interactive, user-friendly web experiences using HTML, CSS, JavaScript and modern frameworks.</p>
+        <div class="topic-icon">🖥️</div>
+        <div class="topic-title">Virtualization</div>
+        <p class="topic-desc">In a previous course, I worked with Kali Linux and Metasploitable to practice penetration testing. I exploited vulnerabilities on the target machine and performed privilege escalation as part of the projects.</p>
       </div>
       <div class="topic-card reveal" style="transition-delay:0.2s">
         <div class="topic-num">03</div>
         <div class="topic-icon">🤖</div>
         <div class="topic-title">Artificial Intelligence</div>
-        <p class="topic-desc">Fascinated by machine learning, neural networks, and how we can teach machines to reason and learn.</p>
+        <p class="topic-desc">In a previous course, I built a neural network that was trained to detect faces and highlight them with a bounding box while they mmoved around.</p>
       </div>
-      <div class="topic-card reveal" style="transition-delay:0.3s">
-        <div class="topic-num">04</div>
-        <div class="topic-icon">🔐</div>
-        <div class="topic-title">Cybersecurity</div>
-        <p class="topic-desc">Understanding how to protect systems and data — from encryption fundamentals to ethical hacking concepts.</p>
-      </div>
+
       <div class="topic-card reveal" style="transition-delay:0.4s">
-        <div class="topic-num">05</div>
-        <div class="topic-icon">📱</div>
-        <div class="topic-title">Software Engineering</div>
-        <p class="topic-desc">Learning software design principles, version control, agile methodologies, and best practices for clean code.</p>
+        <div class="topic-num">04</div>
+        <div class="topic-icon">🧩</div>
+        <div class="topic-title">Computer Hardware</div>
+        <p class="topic-desc">I’ve been tinkering with computer hardware since I was young and have built many systems over the years. With that experience I’ve become familiar with components, expansion slots, and how hardware choices affect system performance.</p>
       </div>
       <div class="topic-card reveal" style="transition-delay:0.5s">
-        <div class="topic-num">06</div>
-        <div class="topic-icon">☁️</div>
-        <div class="topic-title">Cloud & Systems</div>
-        <p class="topic-desc">Diving into operating systems, networking, and cloud platforms to understand how modern infrastructure works.</p>
+        <div class="topic-num">05</div>
+        <div class="topic-icon">🌐</div>
+        <div class="topic-title">Network Security</div>
+        <p class="topic-desc">Understanding how IoT devices communicate on a network is an important part of security. In a previous role as a network manager, I set up the network and configured device connections such as computers and printer, as well as routinely checking connected device's IP addresses.</p>
       </div>
     </div>
   </section>
@@ -302,7 +298,7 @@
       <div class="resume-entry">
         <div class="resume-entry-top">
           <span class="resume-org">Testout PC Pro</span>
-          <span class="resume-date">Earned: December 2022</span>
+          <span class="resume-date">December 2022</span>
         </div>
       </div>
     </div>
@@ -362,7 +358,7 @@
           <div class="resume-download-meta">
             <span class="resume-download-meta-item">🗓 Last updated: <strong>March 2026</strong></span>
             <span class="resume-download-meta-divider">·</span>
-            <span class="resume-download-meta-item">📦 File size: <strong>XX KB</strong></span>
+            <span class="resume-download-meta-item">📦 File size: <strong>278 KB</strong></span>
           </div>
         </div>
       </div>
@@ -377,11 +373,11 @@
     <p>Built with <span id="heartBtn" title="Click me 👀">❤️</span> · <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn ↗</a></p>
   </footer>
 
-  <!-- Easter Egg Overlay -->
+<!-- Easter Egg Overlay -->
   <div id="easterEgg" class="easter-overlay" aria-hidden="true">
     <div class="easter-box">
       <div class="loader"></div>
-      <p class="easter-msg">Made with love 💻</p>
+      <p class="easter-msg">Found a secret!</p>
       <button class="easter-close" id="easterClose">✕</button>
     </div>
   </div>
@@ -402,7 +398,6 @@
       navCollapse.classList.toggle('open', open);
       hamburger.setAttribute('aria-expanded', open);
     });
-    // Close menu when a nav link is clicked on mobile
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
