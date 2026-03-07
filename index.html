@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nicholas Kleinknecht | Cybersecurity Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="images/nkicon.ico">
+  <title>Student Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
@@ -13,18 +12,26 @@
 <!-- NAV -->
   <nav>
     <a href="#home" class="nav-logo">&#123; Nicholas Kleinknecht &#125;</a>
-    <ul class="nav-links">
-      <li><a href="#home" class="active" data-section="home">Home</a></li>
-      <li><a href="#about" data-section="about">About</a></li>
-      <li><a href="#resume" data-section="resume">Resume</a></li>
-    </ul>
-    <div class="nav-right">
-      <label class="switch">
-        <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
-        <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>
-        <input type="checkbox" class="input" id="themeToggle">
-        <span class="slider"></span>
-      </label>
+
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-collapse" id="navCollapse">
+      <ul class="nav-links">
+        <li><a href="#home" class="active" data-section="home">Home</a></li>
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#resume" data-section="resume">Resume</a></li>
+      </ul>
+      <div class="nav-right">
+        <label class="switch">
+          <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+          <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>
+          <input type="checkbox" class="input" id="themeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
     </div>
   </nav>
 
@@ -35,18 +42,18 @@
 
     <div class="home-content">
       <div class="home-tag">✦ Welcome!</div>
-<!-- home photo -->
+
       <div class="home-hero">
         <div class="home-photo">
           <img
-            src="images/homePhoto.png"
+            src="homePhoto.png"
             alt="Home photo"
             class="home-headshot"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           />
           <div class="home-headshot-placeholder">
             <span>📷</span>
-            <p>Image1 missing<br/><small>Replace homePhoto.png</small></p>
+            <p>Your Photo<br/><small>Replace homePhoto.png</small></p>
           </div>
         </div>
 
@@ -57,7 +64,7 @@
           </h1>
 
           <p class="home-sub">
-            Cybersecurity student focused on IoT security, threat analysis, and managing systems
+            Put in self-summary. line 59.
           </p>
 
           <div class="home-actions">
@@ -86,20 +93,20 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I'm a <span>dedicated student</span> with an interest for learning and a drive to make an impact through technology.
-          My journey delving into computers began before I could read, and it has since grown into a full-fledged passion.
+          I'm a <span>dedicated student</span> with a love for learning and a drive to make an impact through technology.
+          My journey in computing began early, and it has since grown into a full-fledged passion.
         </p>
         <p>
-          I thrive in collaborative environments, enjoy tackling <span>challenging problems</span>, and I am always looking
+          I thrive in collaborative environments, love tackling <span>challenging problems</span>, and am always looking
           for opportunities to grow both technically and personally.
         </p>
         <p>
-          Outside of academics, I enjoy working on side projects, collaborating with communities,
-          building computers, and staying up to date with the latest technological advancements.
+          Outside of academics, I enjoy working on side projects, contributing to open-source communities,
+          and staying up to date with the latest developments in the tech world.
         </p>
 
         <div class="skills-section">
-          <h3>Interests</h3>
+          <h3>Skills &amp; Interests</h3>
           <div class="skill-tags">
             <span class="skill-tag">Network Configuration</span>
             <span class="skill-tag">Hardware Troubleshooting</span>
@@ -109,18 +116,18 @@
           </div>
         </div>
       </div>
-<!-- about photo -->
+
       <div class="reveal" style="transition-delay:0.15s">
         <div class="headshot-wrapper">
           <img
-            src="images/aboutPhoto.png"
+            src="aboutPhoto.png"
             alt="About headshot"
             class="about-headshot"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           />
           <div class="about-headshot-placeholder">
             <span>📷</span>
-            <p>Image2 missing<br/><small>Replace aboutPhoto.png</small></p>
+            <p>Add your photo<br/><small>Replace aboutPhoto.png</small></p>
           </div>
         </div>
       </div>
@@ -132,7 +139,7 @@
 
     <div class="computers-intro reveal">
       <p>
-        Cybersecurity is more than just securing systems — it's a way of thinking.
+        Computer science is more than just writing code — it's a way of thinking.
         Here are the areas I'm most passionate about and actively exploring.
       </p>
     </div>
@@ -355,7 +362,7 @@
           <div class="resume-download-meta">
             <span class="resume-download-meta-item">🗓 Last updated: <strong>March 2026</strong></span>
             <span class="resume-download-meta-divider">·</span>
-            <span class="resume-download-meta-item">📦 File size: <strong>278 KB</strong></span>
+            <span class="resume-download-meta-item">📦 File size: <strong>XX KB</strong></span>
           </div>
         </div>
       </div>
@@ -370,11 +377,11 @@
     <p>Built with <span id="heartBtn" title="Click me 👀">❤️</span> · <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn ↗</a></p>
   </footer>
 
-<!-- Easter Egg Overlay -->
+  <!-- Easter Egg Overlay -->
   <div id="easterEgg" class="easter-overlay" aria-hidden="true">
     <div class="easter-box">
       <div class="loader"></div>
-      <p class="easter-msg">Found a secret!</p>
+      <p class="easter-msg">Made with love 💻</p>
       <button class="easter-close" id="easterClose">✕</button>
     </div>
   </div>
@@ -385,6 +392,23 @@
     const html = document.documentElement;
     toggle.addEventListener('change', () => {
       html.dataset.theme = toggle.checked ? 'dark' : '';
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navCollapse = document.getElementById('navCollapse');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      navCollapse.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    // Close menu when a nav link is clicked on mobile
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navCollapse.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      });
     });
 
     // Easter egg heart
