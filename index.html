@@ -23,10 +23,15 @@
 
   </nav>
 
-  <!-- Both hamburger and navCollapse are nav siblings — outside backdrop-filter -->
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <!-- Hamburger (mobile only) -->
+  <label class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <input type="checkbox" id="hamburgerCheck">
+    <div class="checkmark">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </label>
 
   <div class="nav-collapse" id="navCollapse">
     <ul class="nav-links">
