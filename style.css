@@ -1263,28 +1263,55 @@ footer a {
 /* ── HAMBURGER (hidden on desktop) ── */
 .hamburger {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 20px;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
   background: none;
   border: none;
-  cursor: pointer;
   padding: 0;
-  z-index: 101;
-  flex-shrink: 0;
 }
 
-.hamburger span {
-  display: block;
-  width: 100%;
+.hamburger input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.checkmark span {
+  width: 32px;
   height: 2px;
-  background: var(--text);
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  background-color: var(--text);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
 }
 
+.checkmark span:nth-child(1) { top: 10%; }
+.checkmark span:nth-child(2) { top: 50%; }
+.checkmark span:nth-child(3) { top: 90%; }
 
+.hamburger input:checked + .checkmark span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.hamburger input:checked + .checkmark span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.hamburger input:checked + .checkmark span:nth-child(3) {
+  transform: translateX(-50px);
+  opacity: 0;
+}
 
 /* Desktop: nav-collapse is fixed to the right side of the nav bar */
 .nav-collapse {
@@ -1302,12 +1329,11 @@ footer a {
 @media (max-width: 768px) {
   /* Hamburger sits outside nav — fixed to viewport, unaffected by anything */
   .hamburger {
-    display: flex;
+    display: block;
     position: fixed;
     right: 4vw;
-    top: 26px;
+    top: 20px;
     z-index: 200;
-    margin-left: 0;
   }
 
   /* Logo truncates cleanly so it never wraps */
