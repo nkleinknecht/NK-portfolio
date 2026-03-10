@@ -103,17 +103,29 @@ toggle.addEventListener('change', () => {
 // ── HAMBURGER MENU ──
 const hamburger = document.getElementById('hamburger');
 const navCollapse = document.getElementById('navCollapse');
-hamburger.addEventListener('click', () => {
+
+function closeMenu() {
+  hamburger.classList.remove('open');
+  navCollapse.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', false);
+}
+
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation();
   const open = hamburger.classList.toggle('open');
   navCollapse.classList.toggle('open', open);
   hamburger.setAttribute('aria-expanded', open);
 });
+
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navCollapse.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', false);
-  });
+  link.addEventListener('click', closeMenu);
+});
+
+// Tap anywhere outside the nav to close the menu
+document.addEventListener('click', (e) => {
+  if (navCollapse.classList.contains('open') && !navCollapse.contains(e.target) && !hamburger.contains(e.target)) {
+    closeMenu();
+  }
 });
 
 // ── EASTER EGG HEART ──
